@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" type="text/css" href="estilizarLogin.css">
+    <link rel="stylesheet" type="text/js"  href="java2.js">
+</head>
+<body>
+
+    <div class="welcome-container">
+        <h1>Bem-vindo ao site!</h1>
+        <p>Você conseguiu acessar a área protegida.</p>
+    </div>
+
+    <script src="register.js"></script>
+
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+        <p id="login-message" class="error-message"></p>
+        <p>Não tem uma conta? <a href="register.html">Registre-se</a></p>
+    </div>
+
+    <script src="login.js"></script>
+
+    <h1>Criar Conta</h1>
+    <form id="signupForm">
+        <label for="username">Nome de Usuário:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <label for="confirmPassword">Confirmar Senha:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <br>
+        <button type="submit">Criar Conta</button>
+    </form>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit'), function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+                
+                // Redireciona após 2 segundos
+                setTimeout(function() {
+                    window.location.href = 'index.html'; // Substitua pelo URL desejado
+                }, 2000);}
+                 {
+                    document.getElementById('message').innerText = 'Nome de usuário ou senha incorretos.';
+                }
+    </script>
+
+<style>
+    /* Define o estilo do corpo e do conteúdo para garantir que o conteúdo ocupe toda a altura da página */
+    html, body {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    /* Contêiner principal que ocupa toda a altura disponível e empurra o conteúdo para baixo */
+    .container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* Estilo para o conteúdo de mensagem e botão */
+    .footer {
+        text-align: center;
+        padding: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <!-- Conteúdo principal da página pode ir aqui -->
+
+    <!-- Rodapé com a mensagem e o botão -->
+    <div class="footer">
+        <h1>Bem-vindo!</h1>
+        <p>Você está quase lá. Clique no botão abaixo para acessar o site real.</p>
+        <a href="index.html"><button>Acesse o site aqui</button></a>
+    </div>
+</body>
+</html>
